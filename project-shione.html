@@ -4,232 +4,263 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SHIONE by BEYOND · דובאי איילנדס · MAYA</title>
-<meta name="description" content="SHIONE של BEYOND מקבוצת OMNIYAT בדובאי איילנדס: 603 יחידות, 2 מגדלים, דירות 1–3 חדרים ודופלקסים. גישה מוקדמת למשקיעים דרך מאיה בנדולי.">
+<meta name="description" content="SHIONE של BEYOND מקבוצת OMNIYAT בדובאי איילנדס: 603 יחידות, 2 מגדלים, דירות 1–3 חדרים ודופלקסים. גישה מוקדמת דרך מאיה בנדולי.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500&family=Bellefair&family=Marcellus&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=8">
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500&family=Marcellus&family=Suez+One&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="story.css?v=2">
+<style>
+#phero .pname{font-family:var(--latin);font-size:clamp(70px,15vw,240px);letter-spacing:.16em;margin-inline-start:.16em;line-height:1}
+#phero .by{font-family:var(--latin);letter-spacing:.55em;font-size:clamp(12px,1.2vw,15px);color:var(--gold);margin-top:14px}
+#phero .tag{font-family:var(--display);font-size:clamp(28px,3.4vw,52px);margin-top:26px}
+.facts4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;width:min(1150px,100%)}
+.facts4 .n{font-size:clamp(64px,9vw,150px)}
+.facts4 p{color:var(--muted)}
+@media(max-width:800px){.facts4{grid-template-columns:1fr 1fr;row-gap:34px}}
+.sec{padding:clamp(100px,13vw,170px) 0}
+.sec h2{font-size:clamp(50px,7vw,110px);margin:12px 0 22px}
+.two{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(40px,6vw,90px);align-items:start}
+@media(max-width:900px){.two{grid-template-columns:1fr}}
+.prose p{font-size:clamp(18px,1.5vw,21px);color:rgba(244,237,226,.78);margin-bottom:18px}
+.aside{position:sticky;top:110px;border:1px solid var(--faint);border-radius:26px;padding:34px;background:linear-gradient(180deg,rgba(221,187,125,.07),rgba(221,187,125,0))}
+.aside .v{font-family:var(--display);font-size:44px;line-height:1.1;margin:6px 0 4px}
+.aside ul{list-style:none;margin:24px 0;display:grid;gap:12px}
+.aside li{display:flex;gap:12px;align-items:baseline}
+.aside li::before{content:"";width:7px;height:7px;border:1px solid var(--gold);transform:rotate(45deg);flex:none}
+.aside .btn{width:100%;justify-content:center;margin-top:10px}
+.amen{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:50px}
+@media(max-width:900px){.amen{grid-template-columns:1fr}}
+.amen div{border:1px solid var(--faint);border-radius:22px;padding:30px}
+.amen b{display:block;font-family:var(--display);font-weight:400;font-size:28px;margin-bottom:6px}
+.amen span{color:var(--muted)}
+.units{margin-top:50px;border-top:1px solid var(--faint)}
+.unit{display:grid;grid-template-columns:1.2fr 1fr auto;gap:20px;align-items:center;padding:28px 0;border-bottom:1px solid var(--faint)}
+.unit h3{font-family:var(--display);font-weight:400;font-size:clamp(26px,2.6vw,38px)}
+.unit span{color:var(--muted)}
+@media(max-width:700px){.unit{grid-template-columns:1fr}}
+.loc{display:grid;grid-template-columns:1.2fr .8fr;border:1px solid var(--faint);border-radius:26px;overflow:hidden;margin-top:50px}
+.loc iframe{width:100%;min-height:440px;height:100%;border:0;filter:invert(.92) hue-rotate(180deg) sepia(.35) saturate(.7)}
+.loc .list{padding:36px}
+.loc .list div{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--faint)}
+.loc .list b{font-weight:400;color:var(--gold-1)}
+@media(max-width:900px){.loc{grid-template-columns:1fr}.loc iframe{min-height:300px}}
+.devmark{font-family:var(--latin);font-size:clamp(54px,8vw,120px);letter-spacing:.3em}
+</style>
 </head>
 <body>
 
-<header class="top">
-  <span class="bsd">בס״ד</span>
-  <div class="wrap bar">
-    <a href="index.html" class="brand" aria-label="MAYA"><b>MAYA</b><small>DUBAI · ABU DHABI</small></a>
-    <nav class="menu">
-      <a href="#overview">הפרויקט</a>
-      <a href="#gallery">גלריה</a>
-      <a href="#units">דירות</a>
-      <a href="#payment">תשלומים</a>
-      <a href="#location">מיקום</a>
-    </nav>
-    <a class="btn btn-dark" href="#" data-wa="היי מאיה, אשמח לקבל מחירון ותנאים של SHIONE.">מחירון בוואטסאפ</a>
-  </div>
-</header>
+<span class="bsd">בס״ד</span>
+<nav class="nav">
+  <a href="index.html" class="logo">MAYA</a>
+  <a class="l" href="#overview">הפרויקט</a>
+  <a class="l" href="#gallery">גלריה</a>
+  <a class="l" href="#units">דירות</a>
+  <a class="l" href="#calc">תשלומים</a>
+  <a class="l" href="#location">מיקום</a>
+  <a class="cta" href="#" data-wa="היי מאיה, אשמח לקבל מחירון ותנאים של SHIONE.">מחירון בוואטסאפ</a>
+</nav>
+<div class="progress"><i id="prog"></i></div>
 
-<section class="hero p-hero" style="padding:0">
-  <div class="bg"><img src="img/shione-garden.jpg" alt="הדמיה של הכניסה ל-SHIONE"></div>
-  <div class="wrap inner">
-    <span class="label light rv" style="justify-content:center">Dubai Islands · Island B</span>
-    <div class="pname rv d1">SHIONE</div>
-    <div class="by rv d1">BY BEYOND</div>
-    <p class="tagline rv d2">חיים על החוף, בהשראה יפנית</p>
+<!-- פתיחה -->
+<section id="phero" class="pin">
+  <div class="layer" id="heroBg"><img src="img/shione-garden.jpg" alt="הכניסה ל-SHIONE"></div>
+  <div class="shade" id="heroShade"></div>
+  <div class="center" id="heroA">
+    <span class="eyebrow">DUBAI ISLANDS · NEW LAUNCH</span>
+    <div class="pname metal" style="margin-top:18px">SHIONE</div>
+    <div class="by">BY BEYOND · OMNIYAT</div>
   </div>
-  <div class="scroll-cue">SCROLL<i></i></div>
+  <div class="center" id="heroB" style="opacity:0">
+    <span class="eyebrow">ההשקה החדשה בדובאי איילנדס</span>
+    <h1 class="display tag" style="font-size:clamp(46px,7vw,112px)"><span style="display:block">חיים על החוף,</span><span class="metal" style="display:block">בהשראה יפנית</span></h1>
+  </div>
+  <div class="scroll" style="position:absolute;bottom:30px;left:50%;transform:translateX(-50%);font-family:var(--latin);font-size:10px;letter-spacing:.5em;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:10px" id="cue">גללו פנימה<i style="width:1px;height:46px;background:linear-gradient(var(--gold),transparent);animation:cue 2.2s infinite"></i></div>
 </section>
 
-<div class="factbar">
-  <div class="wrap row">
-    <div class="f"><span>מיקום</span><b>דובאי איילנדס</b></div>
-    <div class="f"><span>יזם</span><b>BEYOND · OMNIYAT</b></div>
-    <div class="f"><span>יחידות</span><b>603</b></div>
-    <div class="f"><span>מגדלים</span><b>2 · 20 ו-21 קומות</b></div>
-    <div class="f"><span>דירות</span><b>1–3 חדרים · דופלקסים</b></div>
-    <div class="f"><span>סטטוס</span><b>השקה · גישה מוקדמת</b></div>
-    <div class="cta"><a class="btn btn-gold" href="#" data-wa="היי מאיה, אשמח לגישה מוקדמת ל-SHIONE.">גישה מוקדמת</a></div>
+<!-- מספרים -->
+<section id="nums" class="pin">
+  <div class="layer"><img src="img/shione-aerial.jpg" alt="" style="opacity:.22"></div>
+  <div class="center">
+    <span class="eyebrow up">הפרויקט במספרים</span>
+    <div class="facts4" style="margin-top:40px">
+      <div class="up"><div class="n display metal"><span data-to="603">0</span></div><p>יחידות מגורים</p></div>
+      <div class="up"><div class="n display metal"><span data-to="2">0</span></div><p>מגדלים · 20 ו-21 קומות</p></div>
+      <div class="up"><div class="n display metal" dir="ltr">3.1m</div><p>גובה התקרות</p></div>
+      <div class="up"><div class="n display metal" dir="ltr">2M+</div><p>רגל רבוע במתחם SIORA</p></div>
+    </div>
   </div>
-</div>
+</section>
 
-<section id="overview">
-  <div class="wrap overview">
-    <div class="body">
-      <span class="label rv">The Project</span>
-      <h2 class="rv d1">קהילת מגורים <span class="gold">אקסקלוסיבית</span> על החוף</h2>
-      <p class="lead rv d2" style="margin-bottom:28px">SHIONE היא ההשקה החדשה של BEYOND, מותג היוקרה של קבוצת OMNIYAT, במתחם SIORA שבדובאי איילנדס.</p>
-      <div class="rv d2">
-        <p>הפרויקט מתוכנן כקהילת מגורים בהשראה יפנית: אדריכלות מוקפדת, גני זן, מים זורמים וחומרים טבעיים, לצד חופים וסטנדרט מגורים בינלאומי.</p>
-        <p>שני מגדלי מגורים של 20 ו-21 קומות, עם 603 יחידות במגוון תכנונים: דירות של חדר עד שלושה חדרי שינה ודופלקסים. התקרות בגובה של כ-3.1 מטרים, והדירות פתוחות לאור ולנוף.</p>
-        <p>SHIONE הוא חלק ממתחם SIORA, שמשתרע על יותר מ-2 מיליון רגל רבוע ומשלב בריכות, מתחמי בריאות ופנאי, שטחים ירוקים ומתחמי עבודה.</p>
+<!-- הפרויקט -->
+<section id="overview" class="sec">
+  <div class="wrap two">
+    <div>
+      <span class="eyebrow up">הפרויקט</span>
+      <h2 class="display up">קהילה <span class="metal">אקסקלוסיבית</span> על החוף</h2>
+      <div class="prose up">
+        <p>SHIONE היא ההשקה החדשה של BEYOND, מותג היוקרה של קבוצת OMNIYAT, במתחם SIORA שבדובאי איילנדס.</p>
+        <p>קהילת מגורים בהשראה יפנית: אדריכלות מוקפדת, גני זן, מים זורמים וחומרים טבעיים, לצד חופים וסטנדרט מגורים בינלאומי.</p>
+        <p>שני מגדלים של 20 ו-21 קומות, 603 יחידות במגוון תכנונים: מחדר שינה אחד ועד שלושה, ודופלקסים. תקרות בגובה של כ-3.1 מטרים.</p>
       </div>
     </div>
-    <aside class="side rv d2">
-      <div class="k">מחיר</div>
-      <div class="v">יפורסם בהשקה</div>
-      <div class="s">המחירון המלא נשלח למשקיעים לפני הפרסום</div>
-      <hr>
-      <ul>
-        <li>גישה מוקדמת למלאי הדירות</li>
-        <li>קדימות בבחירת קומה וכיוון</li>
-        <li>תנאים מועדפים למשקיעים של מאיה</li>
-      </ul>
-      <hr>
-      <a class="btn btn-dark" href="#" data-wa="היי מאיה, אשמח לקבל מחירון ותנאים של SHIONE.">מחירון ותנאים בוואטסאפ <span class="arr">←</span></a>
-      <a class="btn btn-line" href="#contact">תיאום שיחה</a>
+    <aside class="aside up">
+      <div style="color:var(--muted);font-size:14px">מחיר</div>
+      <div class="v metal">יפורסם בהשקה</div>
+      <div style="color:var(--muted);font-size:14px">המחירון נשלח למשקיעים לפני הפרסום</div>
+      <ul><li>גישה מוקדמת למלאי הדירות</li><li>קדימות בבחירת קומה וכיוון</li><li>תנאים מועדפים למשקיעים של מאיה</li></ul>
+      <a class="btn btn-gold" href="#" data-wa="היי מאיה, אשמח לקבל מחירון ותנאים של SHIONE.">מחירון ותנאים בוואטסאפ</a>
+      <a class="btn btn-ghost" href="#final">תיאום שיחה</a>
     </aside>
   </div>
 </section>
 
-<section id="gallery" class="ivory" style="padding-top:clamp(70px,8vw,110px)">
-  <div class="wrap">
-    <div class="head"><div><span class="label rv">Gallery</span><h2 class="rv d1">מבט פנימה</h2></div><p class="lead rv d2">הדמיות של היזם, להמחשה בלבד.</p></div>
-    <div class="gallery rv">
-      <figure><img src="img/shione-garden.jpg" alt="גן זן בכניסה"><figcaption>גן הזן בכניסה</figcaption></figure>
-      <figure><img src="img/shione-living.jpg" alt="סלון לדוגמה"><figcaption>סלון לדוגמה</figcaption></figure>
-      <figure><img src="img/shione-lawn.jpg" alt="מדשאה ופינות ישיבה"><figcaption>המדשאה</figcaption></figure>
-    </div>
-    <div class="gallery-row rv d1">
-      <figure><img src="img/shione-aerial.jpg" alt="המתחם מלמעלה"><figcaption>המתחם מלמעלה</figcaption></figure>
-      <figure><img src="img/skyline.jpg" alt="דובאי" style="object-position:center 30%"><figcaption>דובאי</figcaption></figure>
-    </div>
+<!-- גלריה אופקית -->
+<section id="gallery" class="hwrap">
+  <div class="track">
+    <div class="panel"><div class="bg"><img src="img/shione-garden.jpg" alt=""></div><div class="in"><span class="k">01 · ENTRANCE</span><h3 class="display metal">גן הזן בכניסה</h3><p>מים, אבן ועצים מעוצבים. הכניסה לבית מרגישה כמו כניסה לריזורט.</p></div><span class="idx">הדמיה להמחשה</span></div>
+    <div class="panel"><div class="bg"><img src="img/shione-living.jpg" alt=""></div><div class="in"><span class="k">02 · RESIDENCES</span><h3 class="display metal">חללים פתוחים לאור</h3><p>תקרות גבוהות, חומרים טבעיים ותכנון שמנצל כל מטר.</p></div><span class="idx">הדמיה להמחשה</span></div>
+    <div class="panel"><div class="bg"><img src="img/shione-lawn.jpg" alt=""></div><div class="in"><span class="k">03 · GARDENS</span><h3 class="display metal">ירוק בכל מקום</h3><p>מדשאות, שבילים ופינות ישיבה בין המגדלים.</p></div><span class="idx">הדמיה להמחשה</span></div>
+    <div class="panel"><div class="bg"><img src="img/shione-aerial.jpg" alt=""></div><div class="in"><span class="k">04 · SIORA</span><h3 class="display metal">מתחם שלם על החוף</h3><p>בריכות, וולנס, מתחמי עבודה וחוף, בתוך מתחם SIORA.</p></div><span class="idx">הדמיה להמחשה</span></div>
   </div>
 </section>
 
-<section class="dark">
+<!-- מתקנים -->
+<section class="sec" style="background:var(--black-2)">
   <div class="wrap">
-    <span class="label light rv">In Numbers</span><h2 class="rv d1" style="margin-bottom:50px">הפרויקט במספרים</h2>
-    <div class="highlights">
-      <div class="rv"><div class="n num">603</div><p>יחידות מגורים במגוון תכנונים</p></div>
-      <div class="rv d1"><div class="n num">2</div><p>מגדלים של 20 ו-21 קומות</p></div>
-      <div class="rv d2"><div class="n num">3.1<small style="font-size:.4em"> m</small></div><p>גובה התקרות בדירות</p></div>
-      <div class="rv d3"><div class="n num" dir="ltr">2M+</div><p>רגל רבוע במתחם SIORA כולו</p></div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="head"><div><span class="label rv">Amenities</span><h2 class="rv d1">מה יש במתחם</h2></div></div>
-    <div class="amen rv">
-      <div><svg viewBox="0 0 32 32"><path d="M3 22c3 0 3-2 6.5-2S13 22 16 22s3-2 6.5-2S26 22 29 22M3 27c3 0 3-2 6.5-2s3.5 2 6.5 2 3-2 6.5-2 3.5 2 6.5 2M10 18V6a3 3 0 016 0M16 12h8"/></svg><div><b>בריכות שחייה</b><span>בריכות בסגנון ריזורט בתוך המתחם</span></div></div>
-      <div><svg viewBox="0 0 32 32"><path d="M16 29V15M16 15c-6 0-9-4-9-8 4 0 9 2 9 8zm0 0c6 0 9-4 9-8-4 0-9 2-9 8zM8 29h16"/></svg><div><b>גני זן</b><span>גנים בהשראה יפנית, מים ואבן</span></div></div>
-      <div><svg viewBox="0 0 32 32"><circle cx="16" cy="16" r="11"/><path d="M16 9v7l5 3"/></svg><div><b>בריאות ופנאי</b><span>מתחמי וולנס, ספא וכושר</span></div></div>
-      <div><svg viewBox="0 0 32 32"><path d="M2 24c4-6 8-6 14 0s10 6 14 0M6 18l4-8 4 8M18 18l3-6 3 6"/></svg><div><b>חיים על החוף</b><span>סביבת מגורים חופית בדובאי איילנדס</span></div></div>
-      <div><svg viewBox="0 0 32 32"><rect x="5" y="8" width="22" height="14"/><path d="M11 26h10M16 22v4"/></svg><div><b>מתחמי עבודה</b><span>חללי עבודה משותפים בתוך הקהילה</span></div></div>
-      <div><svg viewBox="0 0 32 32"><path d="M4 28V12l12-8 12 8v16M12 28v-8h8v8"/></svg><div><b>שטחים ירוקים</b><span>שבילים, מדשאות ופינות ישיבה</span></div></div>
+    <span class="eyebrow up">מה יש במתחם</span>
+    <h2 class="display up">ריזורט, <span class="metal">כל השנה</span></h2>
+    <div class="amen">
+      <div class="up"><b>בריכות שחייה</b><span>בריכות בסגנון ריזורט בתוך המתחם</span></div>
+      <div class="up"><b>גני זן</b><span>גנים בהשראה יפנית, מים ואבן</span></div>
+      <div class="up"><b>בריאות ופנאי</b><span>מתחמי וולנס, ספא וכושר</span></div>
+      <div class="up"><b>חיים על החוף</b><span>סביבת מגורים חופית בדובאי איילנדס</span></div>
+      <div class="up"><b>מתחמי עבודה</b><span>חללי עבודה משותפים בתוך הקהילה</span></div>
+      <div class="up"><b>שטחים ירוקים</b><span>שבילים, מדשאות ופינות ישיבה</span></div>
     </div>
   </div>
 </section>
 
-<section id="units" class="ivory">
+<!-- דירות -->
+<section id="units" class="sec">
   <div class="wrap">
-    <div class="head"><div><span class="label rv">Residences</span><h2 class="rv d1">סוגי הדירות</h2></div>
-      <p class="lead rv d2">שטחים ומחירים מדויקים נשלחים עם המחירון. לחצו על דירה כדי לקבל תוכנית קומה.</p></div>
-    <table class="units rv">
-      <thead><tr><th>סוג</th><th class="hide-m">מתאים ל</th><th>מחיר</th><th></th></tr></thead>
-      <tbody>
-        <tr><td>חדר שינה אחד</td><td class="hide-m">השקעה להשכרה</td><td>בהשקה</td><td><a class="req" href="#" data-wa="היי מאיה, אשמח לתוכנית קומה ומחיר לדירת חדר שינה אחד ב-SHIONE.">תוכנית קומה ←</a></td></tr>
-        <tr><td>2 חדרי שינה</td><td class="hide-m">השקעה או מגורים</td><td>בהשקה</td><td><a class="req" href="#" data-wa="היי מאיה, אשמח לתוכנית קומה ומחיר לדירת 2 חדרי שינה ב-SHIONE.">תוכנית קומה ←</a></td></tr>
-        <tr><td>3 חדרי שינה</td><td class="hide-m">משפחה</td><td>בהשקה</td><td><a class="req" href="#" data-wa="היי מאיה, אשמח לתוכנית קומה ומחיר לדירת 3 חדרי שינה ב-SHIONE.">תוכנית קומה ←</a></td></tr>
-        <tr><td>דופלקס</td><td class="hide-m">יוקרה</td><td>בהשקה</td><td><a class="req" href="#" data-wa="היי מאיה, אשמח לתוכנית קומה ומחיר לדופלקס ב-SHIONE.">תוכנית קומה ←</a></td></tr>
-      </tbody>
-    </table>
+    <span class="eyebrow up">הדירות</span>
+    <h2 class="display up">בחרו <span class="metal">את שלכם</span></h2>
+    <p class="lead up">שטחים, מחירים ותוכניות קומה נשלחים עם המחירון.</p>
+    <div class="units">
+      <div class="unit up"><h3>חדר שינה אחד</h3><span>מתאים להשקעה להשכרה</span><a class="btn btn-ghost" href="#" data-wa="היי מאיה, אשמח לתוכנית קומה ומחיר לדירת חדר שינה אחד ב-SHIONE.">תוכנית קומה ←</a></div>
+      <div class="unit up"><h3>2 חדרי שינה</h3><span>השקעה או מגורים</span><a class="btn btn-ghost" href="#" data-wa="היי מאיה, אשמח לתוכנית קומה ומחיר לדירת 2 חדרי שינה ב-SHIONE.">תוכנית קומה ←</a></div>
+      <div class="unit up"><h3>3 חדרי שינה</h3><span>למשפחה</span><a class="btn btn-ghost" href="#" data-wa="היי מאיה, אשמח לתוכנית קומה ומחיר לדירת 3 חדרי שינה ב-SHIONE.">תוכנית קומה ←</a></div>
+      <div class="unit up"><h3>דופלקס</h3><span>הקומות העליונות</span><a class="btn btn-ghost" href="#" data-wa="היי מאיה, אשמח לתוכנית קומה ומחיר לדופלקס ב-SHIONE.">תוכנית קומה ←</a></div>
+    </div>
   </div>
 </section>
 
-<section id="payment" class="dark">
+<!-- מחשבון -->
+<section id="calc" class="calc-s">
   <div class="wrap">
-    <div class="head"><div><span class="label light rv">Payment Plan</span><h2 class="rv d1">איך משלמים</h2></div>
-      <p class="lead rv d2">תוכנית התשלומים הרשמית תפורסם בהשקה. בינתיים, בדקו לפי מחיר משוער כמה תצטרכו ביום החתימה.</p></div>
-    <div class="calc rv" id="calcBox">
-      <div class="in">
+    <span class="eyebrow up">תשלומים</span>
+    <h2 class="display up">כמה צריך <span class="metal">ביום החתימה?</span></h2>
+    <p class="lead up">תוכנית התשלומים הרשמית תפורסם בהשקה. בינתיים, בדקו לפי מחיר משוער.</p>
+    <div class="calc up" id="calcBox">
+      <div class="box">
         <div class="fld"><label>מחיר משוער <output data-o="price"></output></label><input name="price" type="range" min="1000000" max="8000000" step="50000" value="2500000"></div>
-        <div class="fld"><label>תוכנית תשלומים לדוגמה</label>
-          <select name="plan">
-            <option value="20,50,30">20% מקדמה · 50% בבנייה · 30% במסירה</option>
-            <option value="10,70,20">10% מקדמה · 70% בבנייה · 20% במסירה</option>
-            <option value="20,40,40">20% מקדמה · 40% בבנייה · 40% במסירה</option>
-            <option value="10,40,50" data-post="1">10% מקדמה · 40% בבנייה · 50% אחרי מסירה</option>
-          </select></div>
+        <div class="fld"><label>תוכנית לדוגמה</label><select name="plan">
+          <option value="20,50,30">20% מקדמה · 50% בבנייה · 30% במסירה</option>
+          <option value="10,70,20">10% מקדמה · 70% בבנייה · 20% במסירה</option>
+          <option value="20,40,40">20% מקדמה · 40% בבנייה · 40% במסירה</option>
+          <option value="10,40,50" data-post="1">10% מקדמה · 40% בבנייה · 50% אחרי מסירה</option></select></div>
         <div class="fld"><label>זמן עד המסירה <output data-o="months"></output></label><input name="months" type="range" min="24" max="60" step="6" value="42"></div>
-        <p style="font-size:12.5px;color:rgba(245,240,232,.45)">מחיר ותוכנית לדוגמה בלבד. שער: 1 דירהם = 0.92 ₪.</p>
+        <p class="fine">מחיר ותוכנית לדוגמה בלבד. שער: 1 דירהם = 0.92 ₪.</p>
       </div>
-      <div class="out">
-        <div class="k">צריך ביום החתימה, כולל אגרת רישום 4%</div>
-        <div class="big" data-o="now"></div>
-        <div class="tl" data-o="tl"></div>
-        <p class="fine">החישוב להמחשה בלבד. התנאים הסופיים נקבעים על ידי היזם.</p>
+      <div class="box">
+        <div style="color:var(--muted);font-size:15px">צריך ביום החתימה, כולל אגרת רישום 4%</div>
+        <div class="big metal" data-o="now"></div>
+        <div data-o="tl"></div>
+        <p class="fine">להמחשה בלבד. התנאים הסופיים נקבעים על ידי היזם.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section id="location">
+<!-- מיקום -->
+<section id="location" class="sec">
   <div class="wrap">
-    <div class="head"><div><span class="label rv">Location</span><h2 class="rv d1">דובאי איילנדס</h2></div>
-      <p class="lead rv d2">ארכיפלג של איים מול חופי דירה, הצפון ההיסטורי של דובאי. אחד האזורים החדשים שמתפתחים הכי מהר בעיר.</p></div>
-    <div class="loc rv">
+    <span class="eyebrow up">מיקום</span>
+    <h2 class="display up">דובאי <span class="metal">איילנדס</span></h2>
+    <p class="lead up">ארכיפלג של איים מול חופי דירה, הצפון ההיסטורי של דובאי. אחד האזורים שמתפתחים הכי מהר בעיר.</p>
+    <div class="loc up">
       <iframe title="מפה של דובאי איילנדס" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=55.27%2C25.28%2C55.36%2C25.34&amp;layer=mapnik&amp;marker=25.305%2C55.31"></iframe>
       <div class="list">
         <div><span>נמל התעופה הבינלאומי</span><b>כ-15 דק׳</b></div>
         <div><span>דירה ושוק הזהב</span><b>כ-10 דק׳</b></div>
         <div><span>דאונטאון ובורג׳ ח׳ליפה</span><b>כ-25 דק׳</b></div>
         <div><span>דובאי מרינה</span><b>כ-40 דק׳</b></div>
-        <p style="font-size:12.5px;color:var(--taupe);margin-top:16px">זמני נסיעה משוערים ברכב, בלי פקקים.</p>
+        <p class="fine">זמני נסיעה משוערים ברכב, בלי פקקים.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="ivory">
-  <div class="wrap dev">
-    <div class="mark rv">BEYOND<small>BY OMNIYAT</small></div>
-    <div>
-      <span class="label rv">The Developer</span>
-      <h2 class="rv d1">מי בונה</h2>
-      <p class="lead rv d2">BEYOND הוא מותג המגורים של OMNIYAT, אחד מיזמי היוקרה המוכרים בדובאי. הקבוצה עומדת מאחורי פרויקטים כמו The Opus שתכננה זאהה חדיד ו-One at Palm Jumeirah.</p>
-      <p class="rv d2" style="margin-top:16px;color:var(--taupe)">כמו בכל פרויקט בדובאי, הכסף של הקונים מופקד בחשבון נאמנות בפיקוח מחלקת המקרקעין, ומשתחרר ליזם לפי התקדמות הבנייה.</p>
-    </div>
+<!-- יזם -->
+<section class="sec" style="background:var(--black-2);text-align:center">
+  <div class="wrap" style="max-width:900px">
+    <span class="eyebrow up">היזם</span>
+    <div class="devmark metal up" style="margin:20px 0 6px">BEYOND</div>
+    <div class="up" style="font-family:var(--latin);letter-spacing:.5em;color:var(--muted);font-size:13px">BY OMNIYAT</div>
+    <p class="lead up" style="margin:34px auto 0">BEYOND הוא מותג המגורים של OMNIYAT, מיזמי היוקרה המוכרים בדובאי. הקבוצה עומדת מאחורי פרויקטים כמו The Opus שתכננה זאהה חדיד ו-One at Palm Jumeirah.</p>
   </div>
 </section>
 
-<section id="faq">
-  <div class="wrap" style="max-width:980px">
-    <span class="label rv">Questions</span><h2 class="rv d1">על SHIONE</h2>
-    <div class="faq rv d2">
-      <details><summary>מתי יפורסמו המחירים?</summary><p>המחירון נשלח קודם למשקיעים שנרשמו לגישה מוקדמת, לפני הפרסום הרשמי. שלחו הודעה ותקבלו אותו ראשונים.</p></details>
-      <details><summary>מה זה "גישה מוקדמת"?</summary><p>אפשרות לשריין יחידה מהמלאי לפני שהוא נפתח לכולם, עם קדימות בבחירת קומה, כיוון וסוג דירה.</p></details>
-      <details><summary>מתי המסירה?</summary><p>מועד המסירה הרשמי יפורסם עם השקת הפרויקט ויופיע בחוזה המכר.</p></details>
-      <details><summary>אפשר לקנות מישראל?</summary><p>כן. את כל התהליך אפשר לעשות מרחוק, כולל חתימה דיגיטלית והעברה בנקאית, עם ליווי בעברית לאורך כל הדרך.</p></details>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="final">
-  <div class="bg"><img src="img/shione-garden.jpg" alt=""></div>
-  <div class="wrap">
-    <span class="label light rv" style="justify-content:center">Early Access</span>
-    <h2 class="rv d1">גישה מוקדמת ל-<span dir="ltr">SHIONE</span></h2>
-    <p class="lead rv d2" style="margin-inline:auto;color:rgba(245,240,232,.8)">השאירו הודעה ומאיה תשלח לכם את המחירון, תוכניות הקומה ותנאי הגישה המוקדמת.</p>
-    <div class="ctas rv d3">
-      <a class="btn btn-gold" href="#" data-wa="היי מאיה, אשמח לגישה מוקדמת ל-SHIONE: מחירון, תוכניות קומה ותנאים.">מחירון ותנאים בוואטסאפ <span class="arr">←</span></a>
-      <a class="btn btn-ghost" href="index.html#contact">תיאום שיחה</a>
-    </div>
+<!-- סיום -->
+<section id="final" style="position:relative;overflow:hidden">
+  <div class="layer" id="finBg"><img src="img/shione-lawn.jpg" alt=""></div>
+  <div class="shade" style="background:rgba(10,8,6,.74)"></div>
+  <div class="center" style="position:relative;min-height:100svh;padding:120px 24px">
+    <span class="eyebrow">גישה מוקדמת</span>
+    <h2 class="display" style="margin-top:14px;font-size:clamp(54px,9vw,150px)"><span style="display:block">היו הראשונים</span><span class="metal" style="display:block" dir="ltr">SHIONE</span></h2>
+    <p class="lead" style="margin:24px auto 0">מאיה תשלח לכם את המחירון, תוכניות הקומה ותנאי הגישה המוקדמת.</p>
+    <form class="form" id="leadForm">
+      <input name="name" placeholder="שם מלא" required>
+      <input name="phone" placeholder="טלפון" type="tel" required>
+      <select name="budget"><option>הון עצמי: עד 300 אלף ₪</option><option>הון עצמי: 300–600 אלף ₪</option><option>הון עצמי: 600 אלף עד מיליון ₪</option><option>הון עצמי: מעל מיליון ₪</option></select>
+      <select name="goal"><option>מטרה: השקעה להשכרה</option><option>מטרה: השבחה ומכירה</option><option>מטרה: דירה לעצמי</option><option>מטרה: ויזת זהב</option></select>
+      <button class="btn btn-gold" type="submit">שליחה בוואטסאפ ←</button>
+    </form>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <div class="row">
-      <a href="index.html" class="brand"><b>MAYA</b><small>DUBAI · ABU DHABI · REAL ESTATE</small></a>
-      <div><a href="index.html#projects">← לכל הפרויקטים</a></div>
-    </div>
-    <p class="legal">המידע מבוסס על פרסומי היזם ועשוי להשתנות. המחירים וההערכות משוערים, אינם מהווים התחייבות או ייעוץ השקעות. הדמיות להמחשה בלבד.</p>
+    <div class="r"><a href="index.html" class="logo">MAYA</a><a href="index.html#ptitle">← לכל הפרויקטים</a></div>
+    <p class="legal">המידע מבוסס על פרסומי היזם ועשוי להשתנות. המחירים משוערים ואינם מהווים התחייבות או ייעוץ השקעות. הדמיות להמחשה בלבד.</p>
   </div>
 </footer>
 
-<a class="wa-float" href="#" data-wa="היי מאיה, אשמח לשמוע על SHIONE." aria-label="וואטסאפ"><svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.4.7 4.7 1.9 6.7L3 29l6.9-2.1c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm0 23.1c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.2 1.2-4-.3-.4c-1.1-1.7-1.7-3.6-1.7-5.6C5.3 9.7 10.1 5 16 5s10.7 4.7 10.7 10.6S21.9 26.1 16 26.1zm5.9-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1c-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2s0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.8 1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.7 5 2.8 1.1 3.4.9 4 .8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg></a>
-<div class="lightbox"><img alt=""></div>
+<a class="wa" href="#" data-wa="היי מאיה, אשמח לשמוע על SHIONE." aria-label="וואטסאפ"><svg viewBox="0 0 32 32"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.4.7 4.7 1.9 6.7L3 29l6.9-2.1c1.9 1 4 1.6 6.1 1.6 7 0 12.7-5.6 12.7-12.6S23 3 16 3zm0 23.1c-1.9 0-3.8-.5-5.4-1.5l-.4-.2-4.1 1.2 1.2-4-.3-.4c-1.1-1.7-1.7-3.6-1.7-5.6C5.3 9.7 10.1 5 16 5s10.7 4.7 10.7 10.6S21.9 26.1 16 26.1zm5.9-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1c-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2s0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.6.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.8 1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.7 5 2.8 1.1 3.4.9 4 .8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg></a>
 
-<script src="app.js?v=8"></script>
-<script>initCalc(document.getElementById('calcBox'));</script>
+<script src="content.js?v=2"></script>
+<script>
+// סצנות ייחודיות לעמוד הפרויקט. story.js מריץ אותן לפני הגלריה, כדי שהסדר יהיה נכון.
+window.PAGE_TOP = () => {
+  gsap.timeline({ scrollTrigger: { trigger: '#phero', start: 'top top', end: '+=170%', scrub: 1, pin: true } })
+    .to('#cue', { opacity: 0, duration: .1 }, 0)
+    .fromTo('#heroBg img', { scale: 1.4 }, { scale: 1.05, ease: 'none', duration: 1 }, 0)
+    .to('#heroA', { scale: .6, opacity: 0, y: -100, duration: .4 }, 0)
+    .to('#heroShade', { opacity: 1, duration: .4 }, 0)
+    .to('#heroBg img', { filter: 'brightness(.5)', duration: .4 }, .2)
+    .fromTo('#heroB', { opacity: 0, y: 80 }, { opacity: 1, y: 0, duration: .4 }, .35)
+    .to('#heroB', { opacity: 1, duration: .25 }, .75);
+  gsap.from('#heroA .pname', { opacity: 0, letterSpacing: '0.6em', duration: 2, ease: 'power3.out' });
+  const nt = gsap.timeline({ scrollTrigger: { trigger: '#nums', start: 'top top', end: '+=120%', scrub: 1, pin: true } });
+  nt.to('#nums .up', { opacity: 1, y: 0, stagger: .12, duration: .35 });
+  document.querySelectorAll('[data-to]').forEach(el => nt.fromTo(el, { textContent: 0 }, { textContent: +el.dataset.to, snap: { textContent: 1 }, duration: .5 }, 0));
+};
+window.PAGE_FALLBACK = () => {
+  document.getElementById('heroB').style.opacity = 1; document.getElementById('heroA').style.display = 'none';
+  document.querySelectorAll('[data-to]').forEach(el => el.textContent = el.dataset.to);
+};
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="story.js?v=5"></script>
 </body>
 </html>
