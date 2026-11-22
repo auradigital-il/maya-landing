@@ -176,37 +176,43 @@ document.querySelectorAll('.nav a.l').forEach(a => {
   t && ScrollTrigger.create({ trigger: t, start: 'top 50%', end: 'bottom 50%', onToggle: s => a.classList.toggle('on', s.isActive) });
 });
 addEventListener('load', () => ScrollTrigger.refresh());
-// 0 · כניסה לווילה: הגלילה מזיזה את הסרט קדימה ואחורה
+// 0 · כניסה לווילה: רצף תמונות על קנבס (חלק יותר מקפיצה בתוך וידאו)
 if (has('#villa')) {
-  const film = byId('villaFilm');
-  let target = 0, shown = 0, dur = 15;
-  const ready = () => { dur = film.duration || dur; };
-  film.addEventListener('loadedmetadata', ready);
-  // ב-iOS צריך "לנגן" פעם אחת כדי שאפשר יהיה לקפוץ בזמן
-  film.play().then(() => film.pause()).catch(() => {});
+  const cv = byId('villaCanvas'), ctx = cv.getContext('2d');
+  const N = 310, set = innerWidth < innerHeight ? 'm' : 'd';
+  const imgs = new Array(N), ok = new Uint8Array(N);
+  const src = (i) => `film/${set}/${String(i + 1).padStart(4, '0')}.webp`;
+  // סדר טעינה: קודם כל תמונה 16, אחר כך ממלאים. ככה אפשר לגלול מיד
+  const order = [], seen = new Uint8Array(N);
+  for (const st of [16, 8, 4, 2, 1]) for (let i = 0; i < N; i += st) if (!seen[i]) { seen[i] = 1; order.push(i); }
+  let q = 0, dirty = true;
+  const next = () => { if (q >= order.length) return; const i = order[q++]; const im = new Image(); im.decoding = 'async';
+    im.onload = () => { imgs[i] = im; ok[i] = 1; dirty = true; next(); }; im.onerror = next; im.src = src(i); };
+  for (let k = 0; k < 6; k++) next();
+  const fit = () => { const d = Math.min(2, devicePixelRatio || 1); cv.width = Math.round(cv.clientWidth * d); cv.height = Math.round(cv.clientHeight * d); dirty = true; };
+  addEventListener('resize', fit); fit();
+  let target = 0, shown = 0, last = -1;
+  const draw = (idx) => {
+    let k = idx; for (let r = 0; r < N; r++) { if (ok[idx - r]) { k = idx - r; break; } if (ok[idx + r]) { k = idx + r; break; } }
+    const im = imgs[k]; if (!im) return;
+    const s = Math.max(cv.width / im.width, cv.height / im.height), w = im.width * s, h = im.height * s;
+    ctx.drawImage(im, (cv.width - w) / 2, (cv.height - h) / 2, w, h);
+  };
   ScrollTrigger.create({
     trigger: '#villa', start: 'top top', end: 'bottom bottom',
-    onUpdate: (s) => {
-      target = s.progress;
-      byId('villaCue').style.opacity = Math.max(0, 1 - s.progress * 8);
-      const endIn = Math.min(1, Math.max(0, (s.progress - 0.86) / 0.1));
+    onUpdate: (st) => {
+      target = st.progress;
+      byId('villaCue').style.opacity = Math.max(0, 1 - st.progress * 8);
+      const endIn = Math.min(1, Math.max(0, (st.progress - 0.86) / 0.1));
       byId('villaEnd').style.opacity = endIn;
       byId('villaEnd').style.transform = `translateY(${(1 - endIn) * 30}px)`;
       byId('villa').classList.toggle('done', endIn > 0.6);
     },
   });
-  // ריכוך: הסרט רודף אחרי הגלילה בעדינות, בלי קפיצות
   gsap.ticker.add(() => {
-    shown += (target - shown) * 0.12;
-    const t = Math.min(dur - 0.05, shown * dur);
-    if (Math.abs(film.currentTime - t) > 0.015) film.currentTime = t;
-    // בטלפון המסך צר: "מצלמה" שעוקבת אחרי הלוגו ואחרי מאיה בתוך התמונה הרחבה
-    if (innerWidth < innerHeight) {
-      const K = [[0, 70], [3.2, 60], [5.2, 50], [8, 56], [10.3, 70], [12.5, 58], [15.5, 22]];
-      let x = K[K.length - 1][1];
-      for (let i = 1; i < K.length; i++) if (t <= K[i][0]) { const [t0, x0] = K[i - 1], [t1, x1] = K[i]; x = x0 + (x1 - x0) * (t - t0) / (t1 - t0); break; }
-      film.style.objectPosition = x.toFixed(1) + '% 50%';
-    } else film.style.objectPosition = '';
+    shown += (target - shown) * 0.18;
+    const idx = Math.round(shown * (N - 1));
+    if (idx !== last || dirty) { draw(idx); last = idx; dirty = false; }
   });
 }
 

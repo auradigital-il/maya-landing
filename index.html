@@ -7,14 +7,14 @@
 <meta name="description" content="מאיה בנדולי: 6 שנות ניסיון בנדל״ן בדובאי ובאבו דאבי. פרויקטים על הנייר, עסקאות מתחת לשוק, מימון ומינוף, וליווי בעברית עד המפתח.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500&family=Marcellus&family=Suez+One&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="story.css?v=3">
+<link rel="stylesheet" href="story.css?v=4">
 </head>
 <body>
 
 <span class="bsd">בס״ד</span>
 <nav class="nav">
   <a href="#intro" class="logo">MAYA</a>
-  <a class="l" href="#maya">מאיה</a>
+  <a class="l" href="#villa">מאיה</a>
   <a class="l" href="#pillars">מה אני עושה</a>
   <a class="l" href="#ptitle">פרויקטים</a>
   <a class="l" href="#path">המסלול</a>
@@ -27,7 +27,7 @@
 <!-- 0 · כניסה לווילה: סרט שנע עם הגלילה -->
 <section id="villa">
   <div class="stage">
-    <video id="villaFilm" src="film/villa.mp4" poster="film/villa-poster.jpg" muted playsinline preload="auto" aria-label="כניסה לווילה של מאיה בדובאי"></video>
+    <canvas id="villaCanvas" role="img" aria-label="כניסה לווילה של מאיה בדובאי"></canvas>
     <div class="veil"></div>
     <div class="cue" id="villaCue">גללו פנימה<i></i></div>
     <div class="end" id="villaEnd">
@@ -68,22 +68,6 @@
   </div>
 </section>
 
-<!-- 3 · מאיה -->
-<section id="maya" class="pin">
-  <div class="grid">
-    <div class="text">
-      <span class="eyebrow">נעים להכיר</span>
-      <h2 class="display metal">מאיה בנדולי</h2>
-      <div class="lines">
-        <p><b>01</b>שש שנים אני חיה ועובדת בשוק הנדל״ן של דובאי ואבו דאבי.</p>
-        <p><b>02</b>אני מכירה את היזמים, את השכונות ואת המספרים מבפנים.</p>
-        <p><b>03</b>המשקיעים שלי מקבלים גישה מוקדמת להשקות, לפני השוק.</p>
-        <p><b>04</b>מהשיחה הראשונה ועד המפתח, הכל בעברית ואיתי.</p>
-      </div>
-    </div>
-    <div class="photo" id="mayaPhoto"><img src="img/maya.jpg?v=3" alt="מאיה בנדולי"></div>
-  </div>
-</section>
 
 <!-- 4 · מה אני עושה (אופקי) -->
 <section id="pillars" class="hwrap">
@@ -224,6 +208,6 @@
 <script src="content.js?v=2"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="story.js?v=6"></script>
+<script src="story.js?v=7"></script>
 </body>
 </html>

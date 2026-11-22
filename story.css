@@ -188,7 +188,8 @@ footer .legal{margin-top:24px;font-size:12.5px;color:rgba(244,237,226,.35)}
 /* 0 · כניסה לווילה */
 #villa{position:relative;height:500vh;background:var(--black)}
 #villa .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
-#villa video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+#villa canvas{position:absolute;inset:0;width:100%;height:100%;display:block;background:#0A0806 url(film/villa-poster.jpg) center/cover no-repeat}
+@media(max-width:860px){#villa canvas{background-image:url(film/m/0001.webp)}}
 #villa .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,8,6,.35) 0%,rgba(10,8,6,0) 28%,rgba(10,8,6,0) 60%,rgba(10,8,6,.7) 100%);pointer-events:none}
 #villa .cue{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);font-family:var(--latin);font-size:11px;letter-spacing:.5em;color:var(--ivory);display:flex;flex-direction:column;align-items:center;gap:10px;text-shadow:0 1px 8px rgba(0,0,0,.6)}
 #villa .cue i{width:1px;height:46px;background:linear-gradient(var(--gold),transparent);animation:cue 2.2s infinite}
