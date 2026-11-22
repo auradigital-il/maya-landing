@@ -235,3 +235,7 @@ footer .legal{margin-top:24px;font-size:12.5px;color:rgba(244,237,226,.35)}
 #call p{font-size:clamp(17px,1.5vw,21px);color:var(--muted);max-width:480px}
 #call .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
 @media(max-width:860px){#call .grid{grid-template-columns:1fr}#call .txt{text-align:right}#call .phone{width:min(280px,72vw)}}
+/* שיחה עם מאיה: הטקסט והכפתורים בצד ימין, הטלפון בשמאל */
+#call .grid{grid-template-columns:minmax(0,6fr) minmax(0,5fr)}
+#call .txt{order:-1}
+@media(max-width:860px){#call .grid{grid-template-columns:1fr}#call .txt{order:0}}
