@@ -204,3 +204,34 @@ footer .legal{margin-top:24px;font-size:12.5px;color:rgba(244,237,226,.35)}
   #villa .end h1{font-size:52px}
   #villa .veil{background:linear-gradient(180deg,rgba(10,8,6,.35) 0%,rgba(10,8,6,0) 25%,rgba(10,8,6,.15) 50%,rgba(10,8,6,.85) 100%)}
 }
+
+/* סצנות קולנועיות בסגנון "סרט" */
+.scene{position:relative;height:100vh;height:100svh;min-height:560px;overflow:hidden;background:var(--black)}
+.scene .bg{position:absolute;inset:0}
+.scene .bg img{width:100%;height:100%;object-fit:cover;will-change:transform}
+.scene .shade{position:absolute;inset:0;pointer-events:none}
+.scene .sh-start{background:linear-gradient(270deg,rgba(10,8,6,.88) 0%,rgba(10,8,6,.55) 34%,rgba(10,8,6,0) 62%),linear-gradient(0deg,rgba(10,8,6,.6),rgba(10,8,6,0) 35%)}
+.scene .sh-end{background:linear-gradient(90deg,rgba(10,8,6,.88) 0%,rgba(10,8,6,.55) 34%,rgba(10,8,6,0) 62%),linear-gradient(0deg,rgba(10,8,6,.6),rgba(10,8,6,0) 35%)}
+.scene .txt{position:absolute;top:50%;transform:translateY(-50%);width:min(560px,44%);padding:0 clamp(24px,6vw,100px)}
+.scene .at-start{inset-inline-start:0}
+.scene .at-end{inset-inline-end:0}
+.scene h2{font-size:clamp(50px,6.6vw,118px);line-height:.98;margin:14px 0 22px}
+.scene p{font-size:clamp(17px,1.5vw,21px);color:var(--ivory);max-width:460px;text-shadow:0 1px 12px rgba(0,0,0,.55)}
+@media(max-width:860px){
+  .scene .txt{top:auto;bottom:0;transform:none;width:100%;padding:0 22px 64px}
+  .scene .sh-start,.scene .sh-end{background:linear-gradient(0deg,rgba(10,8,6,.95) 0%,rgba(10,8,6,.7) 38%,rgba(10,8,6,0) 70%)}
+  .scene h2{font-size:52px}
+  #sceneSign .bg img{object-position:28% 50%}
+  #sceneSite .bg img{object-position:58% 50%}
+}
+
+/* שיחה עם מאיה: טלפון */
+#call{padding:clamp(90px,12vw,160px) 0;background:radial-gradient(50% 60% at 30% 50%,rgba(212,175,110,.12),transparent 70%),var(--black)}
+#call .grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(40px,7vw,110px);align-items:center}
+#call .phone{position:relative;justify-self:center;width:min(330px,80vw);aspect-ratio:9/19.5;border-radius:48px;padding:12px;background:linear-gradient(160deg,#3a3025,#120e0a 40%,#2a2219);box-shadow:0 40px 90px rgba(0,0,0,.6),0 0 0 1px rgba(212,175,110,.35),inset 0 0 0 2px rgba(255,255,255,.04)}
+#call .phone img{width:100%;height:100%;object-fit:cover;border-radius:38px}
+#call .phone .notch{position:absolute;top:22px;left:50%;transform:translateX(-50%);width:96px;height:26px;border-radius:20px;background:#0a0806;z-index:2}
+#call h2{font-size:clamp(46px,5.6vw,96px);line-height:1;margin:14px 0 22px}
+#call p{font-size:clamp(17px,1.5vw,21px);color:var(--muted);max-width:480px}
+#call .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+@media(max-width:860px){#call .grid{grid-template-columns:1fr}#call .txt{text-align:right}#call .phone{width:min(280px,72vw)}}

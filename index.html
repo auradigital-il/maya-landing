@@ -7,7 +7,7 @@
 <meta name="description" content="מאיה בנדולי: 6 שנות ניסיון בנדל״ן בדובאי ובאבו דאבי. פרויקטים על הנייר, עסקאות מתחת לשוק, מימון ומינוף, וליווי בעברית עד המפתח.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500&family=Marcellus&family=Suez+One&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="story.css?v=4">
+<link rel="stylesheet" href="story.css?v=5">
 </head>
 <body>
 
@@ -55,11 +55,34 @@
   <div class="scroll" id="introCue">גללו פנימה<i></i></div>
 </section>
 
+<!-- סצנה · חתימה -->
+<section class="scene" id="sceneSign">
+  <div class="bg"><img src="img/scene-sign.webp" alt="מאיה חותמת על חוזה עם עט זהב"></div>
+  <div class="shade sh-start"></div>
+  <div class="txt at-start">
+    <span class="eyebrow">ליווי אישי</span>
+    <h2 class="display metal">כל עסקה<br>עוברת דרכי</h2>
+    <p>מהבדיקה הראשונה ועד החתימה, אני לצידכם בכל מסמך, בכל שאלה ובכל החלטה.</p>
+  </div>
+</section>
+
+<!-- סצנה · אתר בנייה -->
+<section class="scene" id="sceneSite">
+  <div class="bg"><img src="img/scene-site.webp" alt="מאיה בביקור באתר בנייה בדובאי"></div>
+  <div class="shade sh-end"></div>
+  <div class="txt at-end">
+    <span class="eyebrow">בשטח</span>
+    <h2 class="display metal">אני בודקת<br>כל פרויקט<br>בעיניים שלי</h2>
+    <p>ביקורים באתרי הבנייה, פגישות עם היזמים ובדיקת המספרים, לפני שאתם משקיעים שקל.</p>
+  </div>
+</section>
+
 <!-- 2 · מספרים -->
 <section id="stats" class="pin">
-  <div class="layer"><img src="img/logo-wall.jpg" alt="" style="opacity:.18;filter:blur(2px)"></div>
+  <div class="layer"><img src="img/scene-city.webp" alt="דובאי מלמעלה בשקיעה" style="opacity:.85"></div><div class="shade" style="opacity:1;background:linear-gradient(180deg,rgba(10,8,6,.55),rgba(10,8,6,.35) 40%,rgba(10,8,6,.8))"></div>
   <div class="center">
     <span class="eyebrow up">במספרים</span>
+    <h2 class="display metal up" style="font-size:clamp(40px,6vw,92px);margin-top:10px">העיר שאני<br>מכירה מבפנים</h2>
     <div class="stats" style="margin-top:40px">
       <div class="stat up"><div class="n display metal"><span data-count="6">0</span></div><p>שנות ניסיון בנדל״ן באמירויות</p></div>
       <div class="stat up"><div class="n display metal">2</div><p>אמירויות: דובאי ואבו דאבי</p></div>
@@ -86,6 +109,18 @@
   <div class="layer" id="ptBg"><img src="img/shione-garden.jpg" alt=""></div>
   <div class="shade"></div>
   <div class="center"><h2 class="display" id="ptText"><span style="display:block">הפרויקטים</span><span class="metal" style="display:block">שלי כרגע</span></h2></div>
+</section>
+
+<!-- סצנה · פרויקט בהשקה במסך מלא -->
+<section class="scene proj" id="sceneShione">
+  <div class="bg"><img src="img/shione-aerial.jpg" alt="SHIONE, דובאי איילנדס"></div>
+  <div class="shade sh-start"></div>
+  <div class="txt at-start">
+    <span class="eyebrow">בהשקה · דובאי איילנדס</span>
+    <h2 class="display metal" style="font-family:var(--latin);letter-spacing:.06em">SHIONE</h2>
+    <p>קהילת מגורים בהשראה יפנית על החוף, BY BEYOND · OMNIYAT. 603 יחידות, 1–3 חדרי שינה ודופלקסים, גישה מוקדמת למשקיעים של מאיה.</p>
+    <a class="btn btn-gold" href="project-shione.html" style="margin-top:26px">לעמוד הפרויקט ←</a>
+  </div>
 </section>
 
 <!-- 6 · פרויקטים (אופקי, מתוך content.js) -->
@@ -179,6 +214,19 @@
   </div>
 </section>
 
+<!-- סצנה · שיחה עם מאיה -->
+<section id="call">
+  <div class="wrap grid">
+    <div class="phone"><div class="notch"></div><img src="img/scene-phone.webp" alt="מאיה בשיחת וידאו מהמרפסת בדובאי"></div>
+    <div class="txt">
+      <span class="eyebrow">ישירות איתי</span>
+      <h2 class="display metal">דברו איתי,<br>לא עם מוקד</h2>
+      <p>שיחת היכרות קצרה בוואטסאפ או בווידאו. אני שומעת מה אתם מחפשים, ומציגה רק פרויקטים שמתאימים לכם.</p>
+      <div class="cta-row"><a class="btn btn-gold" href="#" data-wa>שיחה בוואטסאפ ←</a><a class="btn btn-ghost" href="#final">השארת פרטים</a></div>
+    </div>
+  </div>
+</section>
+
 <!-- 13 · סיום -->
 <section id="final" style="position:relative;overflow:hidden">
   <div class="layer" id="finBg"><img src="img/shione-garden.jpg" alt=""></div>
@@ -208,6 +256,6 @@
 <script src="content.js?v=2"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="story.js?v=7"></script>
+<script src="story.js?v=8"></script>
 </body>
 </html>

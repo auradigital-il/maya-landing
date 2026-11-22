@@ -179,7 +179,7 @@ addEventListener('load', () => ScrollTrigger.refresh());
 // 0 · כניסה לווילה: רצף תמונות על קנבס (חלק יותר מקפיצה בתוך וידאו)
 if (has('#villa')) {
   const cv = byId('villaCanvas'), ctx = cv.getContext('2d');
-  const N = 310, set = innerWidth < innerHeight ? 'm' : 'd';
+  const N = 233, set = innerWidth < innerHeight ? 'm' : 'd';
   const imgs = new Array(N), ok = new Uint8Array(N);
   const src = (i) => `film/${set}/${String(i + 1).padStart(4, '0')}.webp`;
   // סדר טעינה: קודם כל תמונה 16, אחר כך ממלאים. ככה אפשר לגלול מיד
@@ -214,6 +214,17 @@ if (has('#villa')) {
     const idx = Math.round(shown * (N - 1));
     if (idx !== last || dirty) { draw(idx); last = idx; dirty = false; }
   });
+}
+
+
+// סצנות: זום איטי לתמונה וכניסה של הטקסט, כמו בסרט
+gsap.utils.toArray('.scene').forEach((sc) => {
+  gsap.fromTo(sc.querySelector('.bg img'), { scale: 1.18, yPercent: -4 }, { scale: 1, yPercent: 4, ease: 'none', scrollTrigger: { trigger: sc, start: 'top bottom', end: 'bottom top', scrub: true } });
+  gsap.from(sc.querySelectorAll('.txt > *'), { opacity: 0, y: 50, stagger: .12, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: sc, start: 'top 55%' } });
+});
+if (has('#call')) {
+  gsap.from('#call .phone', { opacity: 0, y: 80, rotate: -4, duration: 1.2, ease: 'power3.out', scrollTrigger: { trigger: '#call', start: 'top 70%' } });
+  gsap.from('#call .txt > *', { opacity: 0, y: 40, stagger: .12, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: '#call', start: 'top 60%' } });
 }
 
 })();
