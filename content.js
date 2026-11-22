@@ -4,7 +4,7 @@
 
 window.MAYA = {
   // וואטסאפ של מאיה, פורמט בינלאומי בלי + (לדוגמה 971501234567). ריק = הודעת בדיקה.
-  whatsapp: '',
+  whatsapp: '972528787680',
   instagram: 'https://www.instagram.com/mayabendoli/',
   instagramBiz: 'https://www.instagram.com/real_estate_maya_dubai/',
   rate: 0.92,        // שער דירהם-שקל לדוגמה
