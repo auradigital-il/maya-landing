@@ -184,3 +184,22 @@ footer .legal{margin-top:24px;font-size:12.5px;color:rgba(244,237,226,.35)}
 /* חשיפה פשוטה */
 .up{opacity:0;transform:translateY(40px)}
 @media(prefers-reduced-motion:reduce){.up{opacity:1;transform:none}}
+
+/* 0 · כניסה לווילה */
+#villa{position:relative;height:500vh;background:var(--black)}
+#villa .stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden}
+#villa video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+#villa .veil{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,8,6,.35) 0%,rgba(10,8,6,0) 28%,rgba(10,8,6,0) 60%,rgba(10,8,6,.7) 100%);pointer-events:none}
+#villa .cue{position:absolute;bottom:30px;left:50%;transform:translateX(-50%);font-family:var(--latin);font-size:11px;letter-spacing:.5em;color:var(--ivory);display:flex;flex-direction:column;align-items:center;gap:10px;text-shadow:0 1px 8px rgba(0,0,0,.6)}
+#villa .cue i{width:1px;height:46px;background:linear-gradient(var(--gold),transparent);animation:cue 2.2s infinite}
+#villa .end{position:absolute;inset-block:0;inset-inline-start:0;width:min(560px,46%);display:flex;flex-direction:column;justify-content:center;gap:14px;padding:0 clamp(24px,6vw,96px);opacity:0;pointer-events:none}
+#villa .end h1{font-size:clamp(54px,7vw,112px)}
+#villa .end p{font-size:clamp(17px,1.5vw,21px);color:var(--ivory);max-width:420px;text-shadow:0 1px 10px rgba(0,0,0,.6)}
+#villa .end .btn{align-self:flex-start;margin-top:10px;background:linear-gradient(180deg,var(--gold-1),var(--gold-2) 55%,var(--gold-3));color:#1a1206;font-weight:500;padding:13px 26px;border-radius:999px}
+#villa.done .end{pointer-events:auto}
+@media(max-width:860px){
+  #villa{height:420vh}
+  #villa .end{width:100%;justify-content:flex-end;padding:0 22px 70px;text-align:right}
+  #villa .end h1{font-size:52px}
+  #villa .veil{background:linear-gradient(180deg,rgba(10,8,6,.35) 0%,rgba(10,8,6,0) 25%,rgba(10,8,6,.15) 50%,rgba(10,8,6,.85) 100%)}
+}

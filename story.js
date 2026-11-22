@@ -176,4 +176,38 @@ document.querySelectorAll('.nav a.l').forEach(a => {
   t && ScrollTrigger.create({ trigger: t, start: 'top 50%', end: 'bottom 50%', onToggle: s => a.classList.toggle('on', s.isActive) });
 });
 addEventListener('load', () => ScrollTrigger.refresh());
+// 0 · כניסה לווילה: הגלילה מזיזה את הסרט קדימה ואחורה
+if (has('#villa')) {
+  const film = byId('villaFilm');
+  let target = 0, shown = 0, dur = 15;
+  const ready = () => { dur = film.duration || dur; };
+  film.addEventListener('loadedmetadata', ready);
+  // ב-iOS צריך "לנגן" פעם אחת כדי שאפשר יהיה לקפוץ בזמן
+  film.play().then(() => film.pause()).catch(() => {});
+  ScrollTrigger.create({
+    trigger: '#villa', start: 'top top', end: 'bottom bottom',
+    onUpdate: (s) => {
+      target = s.progress;
+      byId('villaCue').style.opacity = Math.max(0, 1 - s.progress * 8);
+      const endIn = Math.min(1, Math.max(0, (s.progress - 0.86) / 0.1));
+      byId('villaEnd').style.opacity = endIn;
+      byId('villaEnd').style.transform = `translateY(${(1 - endIn) * 30}px)`;
+      byId('villa').classList.toggle('done', endIn > 0.6);
+    },
+  });
+  // ריכוך: הסרט רודף אחרי הגלילה בעדינות, בלי קפיצות
+  gsap.ticker.add(() => {
+    shown += (target - shown) * 0.12;
+    const t = Math.min(dur - 0.05, shown * dur);
+    if (Math.abs(film.currentTime - t) > 0.015) film.currentTime = t;
+    // בטלפון המסך צר: "מצלמה" שעוקבת אחרי הלוגו ואחרי מאיה בתוך התמונה הרחבה
+    if (innerWidth < innerHeight) {
+      const K = [[0, 70], [3.2, 60], [5.2, 50], [8, 56], [10.3, 70], [12.5, 58], [15.5, 22]];
+      let x = K[K.length - 1][1];
+      for (let i = 1; i < K.length; i++) if (t <= K[i][0]) { const [t0, x0] = K[i - 1], [t1, x1] = K[i]; x = x0 + (x1 - x0) * (t - t0) / (t1 - t0); break; }
+      film.style.objectPosition = x.toFixed(1) + '% 50%';
+    } else film.style.objectPosition = '';
+  });
+}
+
 })();
